@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANI STAY - Booking</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <div class="banner">
+     <nav>
+        <img src="logo.png" alt="logo" class="logo">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="branch.html">Hotel Branches</a></li>
+            <li><a href="adventures.html">Adventures</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a class="active" href="#booking">Bookings</a></li>
+            <li><a href="signin.html"><img src="1.png" alt="signin" class="signin"></a></li>
+        </ul>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+     </nav>
+     <br><br>
+     <main>
+        <!-- Book hotel room -->
+        <section class="booking-form">
+            <h2>Book a Hotel Room</h2>
+            <form action="hotel-booking.php" method="POST"> 
+                <label for="check-in">Check-in Date</label>
+                <input type="date" id="check-in" name="check-in" required>
+
+                <label for="check-out">Check-out Date</label>
+                <input type="date" id="check-out" name="check-out" required>
+
+                <label for="room-type">Room Type</label>
+                <select id="room-type" name="room-type" required>
+                    <option value="">Select a room type</option>
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="family">Family</option>
+                    
+                </select>
+
+                <button type="submit">Book Hotel Room</button>
+            </form>
+        </section>
+
+        <!-- Book an adventure -->
+        <section class="booking-form">
+            <h2>Book an Adventure</h2>
+            <form action="adventure-booking.php" method="POST"> 
+                <label for="adventure">Select Adventure</label>
+                <select id="adventure" name="adventure" required>
+                    <option value="">Select an Adventure</option>
+                    <option value="sailing">Sailing</option>
+                    <option value="rock climbing">Rock Climbing</option>
+                    <option value="biking">Biking</option>
+                </select>
+
+                <label for="participants">Number of Participants</label>
+                <input type="number" id="participants" name="participants" min="1" required>
+
+                <button type="submit">Book Adventure</button>
+            </form>
+        </section>
+      
+        <!-- Award Ceremony Booking -->
+    <section class="booking-form">
+        <h2>Book an Award Ceremony</h2>
+        <form action="award-ceremony-booking.php" method="POST">
+            <label for="ceremony-type">Ceremony Type</label>
+            <select id="ceremony-type" name="ceremony-type" required>
+                <option value="">Select the options</option>
+                <option value="business">Business Awards</option>
+                <option value="entertainment">Entertainment Awards</option>
+                <option value="education">Educational Awards</option>
+            </select>
+
+            <label for="date">Select Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Book Award Ceremony</button>
+        </form>
+    </section>
+
+    <!-- Wedding Booking  -->
+    <section class="booking-form">
+        <h2>Book a Wedding</h2>
+        <form action="wedding-booking.php" method="POST">
+            <label for="wedding-type">Wedding Type</label>
+            <select id="wedding-type" name="wedding-type" required>
+                <option value="">Select the wedding type</option>
+                <option value="indoor">Indoor Wedding</option>
+                <option value="outdoor">Outdoor Wedding</option>
+                <option value="destination">Destination Wedding</option>
+            </select>
+
+            <label for="wedding-date">Select Wedding Date</label>
+            <input type="date" id="wedding-date" name="wedding-date" required>
+
+            <button type="submit">Book Wedding</button>
+        </form>
+    </section>
+    </main>
+    <br><br><br><br>
+    <footer>
+        <p>&copy; 2023 HANI STAY. All rights reserved.</p>
+    </footer>
+    </div>
+    <script src="humburger.js"></script>
+</body>
+</html>
